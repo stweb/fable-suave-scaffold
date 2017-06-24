@@ -10,7 +10,7 @@ open Suave.Operators
 open Suave.RequestErrors
 open System
 open Suave.ServerErrors
-open ServerCode.Domain
+open Shared.Domain
 open Suave.Logging
 open Suave.Logging.Message
 
@@ -69,7 +69,7 @@ let postWishList (ctx: HttpContext) =
             let wishList = 
                 ctx.request.rawForm
                 |> System.Text.Encoding.UTF8.GetString
-                |> FableJson.ofJson<Domain.WishList>
+                |> FableJson.ofJson<Shared.Domain.WishList>
             
             if token.UserName <> wishList.UserName then
                 return! UNAUTHORIZED (sprintf "WishList is not matching user %s" token.UserName) ctx

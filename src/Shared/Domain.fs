@@ -1,5 +1,5 @@
 /// Domain model shared between client and server.
-namespace ServerCode.Domain
+namespace Shared.Domain
    
 open System
 

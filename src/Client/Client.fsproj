@@ -3,7 +3,7 @@
     <TargetFramework>netstandard1.6</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="../Server/Shared/Domain.fs" />
+    <Compile Include="../Shared/Domain.fs" />
     <Compile Include="Messages.fs" />
     <Compile Include="Style.fs" />
     <Compile Include="Utils.fs" />

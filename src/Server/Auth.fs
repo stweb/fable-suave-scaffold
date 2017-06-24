@@ -13,7 +13,7 @@ let login (ctx: HttpContext) = async {
     let login = 
         ctx.request.rawForm 
         |> System.Text.Encoding.UTF8.GetString
-        |> FableJson.ofJson<Domain.Login>
+        |> FableJson.ofJson<Shared.Domain.Login>
 
     try
         if (login.UserName <> "test" || login.Password <> "test") && 
